@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-20T23:24:47.046734" rpa="false" schemaversion="5">
+<suite id="s1" name="Omnify" source="C:\Users\user\PycharmProjects\Robotframework_rev\Tests\omnify.robot">
+<test id="s1-t1" name="Validate employee addition" line="11">
+<kw name="open the browser with login page url" owner="resource">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:24:48.106921" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-04-20T23:24:48.106618" elapsed="3.404967"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:24:51.514448" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-20T23:24:51.513413" elapsed="10.445204"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@name = 'username']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-20T23:25:01.959230" elapsed="1.812813"/>
+</kw>
+<status status="PASS" start="2025-04-20T23:24:48.104899" elapsed="15.667536"/>
+</kw>
+<kw name="fill the login form" owner="resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:03.774559" level="INFO">Typing text 'Admin' into text field 'XPATH://input[@name = 'username']'.</msg>
+<arg>XPATH://input[@name = 'username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:03.774094" elapsed="0.251681"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:04.026786" level="INFO">Typing password into text field 'xpath://input[@name = 'password']'.</msg>
+<msg time="2025-04-20T23:25:04.126672" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@name = 'password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:04.026106" elapsed="0.278940"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:04.305916" level="INFO">Clicking button 'xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:04.305484" elapsed="0.467021"/>
+</kw>
+<arg>${user_name}</arg>
+<arg>${user_password}</arg>
+<status status="PASS" start="2025-04-20T23:25:03.773286" elapsed="0.999860"/>
+</kw>
+<kw name="wait until elements in next page is loaded" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-20T23:25:04.776050" elapsed="2.783051"/>
+</kw>
+<arg>${after_login}</arg>
+<status status="PASS" start="2025-04-20T23:25:04.774771" elapsed="2.784872"/>
+</kw>
+<kw name="click on PIM link" owner="LoginPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:07.564232" level="INFO">Clicking element 'xpath://span[text() = 'PIM']'.</msg>
+<arg>xpath://span[text() = 'PIM']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:07.563121" elapsed="1.325334"/>
+</kw>
+<status status="PASS" start="2025-04-20T23:25:07.561394" elapsed="1.327731"/>
+</kw>
+<kw name="wait until elements in next page is loaded" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-20T23:25:08.892599" elapsed="0.701805"/>
+</kw>
+<arg>${addition_employee_screen_wait}</arg>
+<status status="PASS" start="2025-04-20T23:25:08.890671" elapsed="0.703933"/>
+</kw>
+<kw name="click on add employee" owner="LoginPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:09.596105" level="INFO">Clicking element 'xpath://a[text() = 'Add Employee']'.</msg>
+<arg>xpath://a[text() = 'Add Employee']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:09.595757" elapsed="0.656000"/>
+</kw>
+<status status="PASS" start="2025-04-20T23:25:09.595256" elapsed="0.656727"/>
+</kw>
+<kw name="wait until elements in next page is loaded" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-20T23:25:10.253458" elapsed="0.990477"/>
+</kw>
+<arg>${add_emp_wait}</arg>
+<status status="PASS" start="2025-04-20T23:25:10.252767" elapsed="0.991402"/>
+</kw>
+<kw name="enter the data of the employee for creation" owner="LoginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:11.245953" level="INFO">Typing text 'chandan' into text field 'css:.orangehrm-firstname'.</msg>
+<arg>${firstname}</arg>
+<arg>chandan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:11.245532" elapsed="0.258403"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:11.504526" level="INFO">Typing text 's' into text field 'xpath://input[@name='middleName']'.</msg>
+<arg>${middlename}</arg>
+<arg>s</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:11.504221" elapsed="0.305258"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:11.812336" level="INFO">Typing text 'maheshwarappa' into text field 'xpath://input[@name='lastName']'.</msg>
+<arg>${lastname}</arg>
+<arg>maheshwarappa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:11.810836" elapsed="0.539349"/>
+</kw>
+<status status="PASS" start="2025-04-20T23:25:11.244933" elapsed="1.105672"/>
+</kw>
+<kw name="submit the data to add the employee" owner="LoginPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:12.353621" level="INFO">Clicking button 'xpath://*[@type='submit']'.</msg>
+<arg>${submit_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:12.352842" elapsed="0.372551"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://a[text() = 'Employee List']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-20T23:25:12.726421" elapsed="0.082578"/>
+</kw>
+<status status="PASS" start="2025-04-20T23:25:12.351902" elapsed="0.457527"/>
+</kw>
+<kw name="save the data in employee page" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:(//button[@type='submit'])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-20T23:25:12.813091" elapsed="0.076602"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:12.890885" level="INFO">Clicking button '(//button[@type='submit'])[1]'.</msg>
+<arg>(//button[@type='submit'])[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:12.890250" elapsed="0.348709"/>
+</kw>
+<status status="PASS" start="2025-04-20T23:25:12.811596" elapsed="0.427781"/>
+</kw>
+<kw name="navigate to list of data and match with expected data" owner="LoginPage">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-04-20T23:25:13.243153" level="INFO">@{expected_list} = [ chandan s ]</msg>
+<var>@{expected_list}</var>
+<arg>chandan s</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-04-20T23:25:13.241865" elapsed="0.001426"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:13.244418" level="INFO">Clicking element 'xpath://a[text() = 'Employee List']'.</msg>
+<arg>xpath://a[text() = 'Employee List']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:13.243806" elapsed="0.796040"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://div[@class='oxd-table-row oxd-table-row--with-border']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-20T23:25:14.040564" elapsed="1.902378"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-04-20T23:25:15.975138" level="INFO">${datas} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.141")&gt;, &lt;selenium.webdri...</msg>
+<var>${datas}</var>
+<arg>xpath://div/div[3][@class='oxd-table-cell oxd-padding-cell']/div</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-04-20T23:25:15.943313" elapsed="0.031935"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-04-20T23:25:15.975997" level="INFO">@{actual_list} = [ ]</msg>
+<var>@{actual_list}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-04-20T23:25:15.975569" elapsed="0.000500"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.009266" level="INFO">2ea60c10 7c00ba11</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:15.976951" elapsed="0.032460"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.009731" elapsed="0.022592"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.141")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:15.976706" elapsed="0.055783"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.054720" level="INFO">99N75 425</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.033098" elapsed="0.021769"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.055179" elapsed="0.021404"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.142")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.032847" elapsed="0.043903"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.098980" level="INFO">A8DCo 4Ys</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.077488" elapsed="0.021634"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.099464" elapsed="0.021057"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.143")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.077124" elapsed="0.043648"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.143032" level="INFO">Aday</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.121435" elapsed="0.021743"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.143519" elapsed="0.021238"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.144")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.121170" elapsed="0.043758"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.191316" level="INFO">AL</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.165467" elapsed="0.026028"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.191876" elapsed="0.026398"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.145")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.165227" elapsed="0.053254"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.254129" level="INFO">Alasdair</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.219221" elapsed="0.035085"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.254725" elapsed="0.026355"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.146")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.218894" elapsed="0.062393"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.313122" level="INFO">Amelia</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.281980" elapsed="0.031359"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.313751" elapsed="0.030259"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.147")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.281649" elapsed="0.062571"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.371152" level="INFO">AMVGV TFFVZ</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.344910" elapsed="0.026423"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.371888" elapsed="0.028613"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.148")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.344599" elapsed="0.056102"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.427982" level="INFO">Andrea S</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.401689" elapsed="0.026477"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.428561" elapsed="0.026140"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.149")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.401382" elapsed="0.053525"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.482621" level="INFO">Angela</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.455840" elapsed="0.026961"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.483181" elapsed="0.026123"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.150")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.455523" elapsed="0.053985"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.538290" level="INFO">aniket t</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.510377" elapsed="0.028096"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.538851" elapsed="0.026780"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.151")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.509879" elapsed="0.055958"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.591838" level="INFO">aniket Ashok</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.566609" elapsed="0.025444"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.592436" elapsed="0.026108"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.152")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.566203" elapsed="0.052551"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.646287" level="INFO">aniket Ashok</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.619490" elapsed="0.026971"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.646869" elapsed="0.026106"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.153")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.619127" elapsed="0.054054"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.699580" level="INFO">AQCNL RERPZ</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.673924" elapsed="0.025833"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.700210" elapsed="0.026427"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.154")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.673593" elapsed="0.053251"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.753771" level="INFO">Ash J</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.727532" elapsed="0.026418"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.754324" elapsed="0.025386"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.155")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.727207" elapsed="0.052874"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.807505" level="INFO">AYCp</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.781092" elapsed="0.026598"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.808069" elapsed="0.025971"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.156")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.780767" elapsed="0.053481"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.860937" level="INFO">bala kumar</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.834943" elapsed="0.026171"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.861486" elapsed="0.025729"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.157")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.834617" elapsed="0.052804"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.914271" level="INFO">bmrtahvwhibmrtahvwhi</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.888125" elapsed="0.026328"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.914824" elapsed="0.025773"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.158")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.887793" elapsed="0.053007"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:16.967144" level="INFO">chandan s</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.941666" elapsed="0.025659"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.967699" elapsed="0.025740"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.159")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.941330" elapsed="0.052351"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.020938" level="INFO">chandan s</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:16.994394" elapsed="0.026725"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.021494" elapsed="0.025549"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.160")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:16.994060" elapsed="0.053188"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.095272" level="INFO">Charles</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.047965" elapsed="0.047546"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.096057" elapsed="0.035314"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.161")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.047615" elapsed="0.084034"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.167726" level="INFO">Charlotte</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.132612" elapsed="0.035360"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.168505" elapsed="0.035078"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.162")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.132203" elapsed="0.071652"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.255217" level="INFO">Christopher</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.204801" elapsed="0.050659"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.256020" elapsed="0.053893"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.163")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.204398" elapsed="0.105779"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.345147" level="INFO">CSxk</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.311112" elapsed="0.034341"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.345998" elapsed="0.035004"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.164")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.310719" elapsed="0.070555"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.416644" level="INFO">dhbrukkuzldhbrukkuzl</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.382204" elapsed="0.034690"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.417457" elapsed="0.034270"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.165")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.381809" elapsed="0.070186"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.487054" level="INFO">DHINA KARAN</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.453084" elapsed="0.034207"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.487834" elapsed="0.034606"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.166")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.452633" elapsed="0.070083"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.559771" level="INFO">Divya Mati</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.523679" elapsed="0.036480"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.560861" elapsed="0.034581"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.167")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.523267" elapsed="0.072444"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.630855" level="INFO">Divya Mati</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.596669" elapsed="0.034487"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.631691" elapsed="0.038089"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.168")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.596282" elapsed="0.073977"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.705676" level="INFO">Divya Mati</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.671993" elapsed="0.033982"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.706513" elapsed="0.033063"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.169")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.671484" elapsed="0.068341"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.772026" level="INFO">Divya Mati</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.740647" elapsed="0.031594"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.772720" elapsed="0.036964"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.170")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.740298" elapsed="0.069646"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.845203" level="INFO">Divya Mati</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.811375" elapsed="0.034147"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.846330" elapsed="0.036014"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.171")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.810694" elapsed="0.071897"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.914178" level="INFO">Emily</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.883459" elapsed="0.030938"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.914840" elapsed="0.030614"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.172")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.883107" elapsed="0.062592"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:17.994035" level="INFO">FName Mname</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.946531" elapsed="0.047720"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:17.994793" elapsed="0.031369"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.173")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:17.946176" elapsed="0.080236"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.058259" level="INFO">ftdkux</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.027256" elapsed="0.031222"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.058927" elapsed="0.031200"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.174")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.026902" elapsed="0.063473"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.123276" level="INFO">fthnvn</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.091240" elapsed="0.032251"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.123935" elapsed="0.031454"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.175")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.090855" elapsed="0.064877"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.188339" level="INFO">fthnvn</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.156614" elapsed="0.031947"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.189001" elapsed="0.031763"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.176")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.156258" elapsed="0.064753"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.252626" level="INFO">fthyfv</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.221880" elapsed="0.030960"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.253321" elapsed="0.030583"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.177")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.221495" elapsed="0.062655"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.315560" level="INFO">ftioiu</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.285009" elapsed="0.030766"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.316218" elapsed="0.030689"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.178")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.284621" elapsed="0.062560"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.378496" level="INFO">ftioiu</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.348221" elapsed="0.030494"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.379314" elapsed="0.030886"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.179")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.347868" elapsed="0.062578"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.442190" level="INFO">ftioiu</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.411312" elapsed="0.031127"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.442930" elapsed="0.030814"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.180")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.410957" elapsed="0.063030"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.505905" level="INFO">ftioiu</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.474866" elapsed="0.031255"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.506568" elapsed="0.031019"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.181")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.474469" elapsed="0.063361"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.569365" level="INFO">ftndlm</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.538691" elapsed="0.030890"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.570026" elapsed="0.030820"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.182")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.538348" elapsed="0.062745"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.634360" level="INFO">ftpjte</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.602116" elapsed="0.032494"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.635097" elapsed="0.031287"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.183")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.601630" elapsed="0.065025"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.712534" level="INFO">ftyseo</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.667537" elapsed="0.045378"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.713832" elapsed="0.039126"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.184")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.667183" elapsed="0.086185"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.790903" level="INFO">ftyseo</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.754565" elapsed="0.036717"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.792055" elapsed="0.039171"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.185")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.754047" elapsed="0.077440"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.862421" level="INFO">ftyseo</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.832947" elapsed="0.029693"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.863160" elapsed="0.022895"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.186")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.832347" elapsed="0.053832"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.904723" level="INFO">ftyseo</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.886572" elapsed="0.018261"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.905123" elapsed="0.030651"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.187")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.886391" elapsed="0.049632"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:18.955003" level="INFO">ftyseo</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.936768" elapsed="0.018470"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:18.955674" elapsed="0.044595"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.188")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:18.936434" elapsed="0.064024"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:19.019603" level="INFO">ftyseo</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:19.001226" elapsed="0.018495"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:19.019959" elapsed="0.015892"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.189")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:19.000900" elapsed="0.035157"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-20T23:25:19.054258" level="INFO">GGXb</msg>
+<arg>${data.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-20T23:25:19.036721" elapsed="0.017673"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${data.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-04-20T23:25:19.054631" elapsed="0.013127"/>
+</kw>
+<var name="${data}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca964cf3776e276c407ff8de606586ac", element="f.3063FB471CB4231398B5D1153DF5285D.d.0FBAECD919D87E0041387CAB44EFC9D9.e.190")&gt;</var>
+<status status="PASS" start="2025-04-20T23:25:19.036438" elapsed="0.031452"/>
+</iter>
+<var>${data}</var>
+<value>@{datas}</value>
+<status status="PASS" start="2025-04-20T23:25:15.976251" elapsed="3.091779"/>
+</for>
+<kw name="List Should Contain Sub List" owner="Collections">
+<arg>${actual_list}</arg>
+<arg>${expected_list}</arg>
+<doc>Fails if not all elements in ``list2`` are found in ``list1``.</doc>
+<status status="PASS" start="2025-04-20T23:25:19.068290" elapsed="0.000381"/>
+</kw>
+<status status="PASS" start="2025-04-20T23:25:13.240898" elapsed="5.827921"/>
+</kw>
+<status status="PASS" start="2025-04-20T23:24:48.103482" elapsed="30.965807"/>
+</test>
+<doc>End to end validation of employee addition</doc>
+<status status="PASS" start="2025-04-20T23:24:47.050239" elapsed="32.021787"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Omnify" id="s1" pass="1" fail="0" skip="0">Omnify</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

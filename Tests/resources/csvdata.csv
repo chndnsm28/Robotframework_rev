@@ -1,0 +1,4 @@
+*** Test Cases ***,${username}  ,${password}
+Invalid Username,cgahdna,learning
+Invalid password,Rahulshettyacademy,inhaluf
+Special Character,na#2dd,learning
